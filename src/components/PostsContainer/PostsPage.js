@@ -22,3 +22,4 @@ const PostsPage = () => {
 
 export default PostsPage;
 
+//Finished MVP
