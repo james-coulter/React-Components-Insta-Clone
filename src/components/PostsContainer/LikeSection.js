@@ -5,10 +5,9 @@ import React, {useState} from "react";
 
 const LikeSection = props => {
 
+  console.log(props)
   const [likes, setLikes] = useState(props.likes)
-  const handleClick = () => {
-    setLikes (likes + 1)
-  }
+  const likesCounter = () => setLikes(likes + 1)
 
   return (
     <div>
@@ -17,7 +16,7 @@ const LikeSection = props => {
       key="likes-icons-container"
     >
       <div className="like-section-wrapper">
-        <button className="far fa-heart" onClick={handleClick}/>
+        <button className="far fa-heart" onClick={() => setLikes(likesCounter)}/>
       </div>
       <div className="like-section-wrapper">
         <i className="far fa-comment" />
@@ -25,7 +24,7 @@ const LikeSection = props => {
     </div>
     <p className="like-number">
       
-     {likes} likes</p>
+     {likes} {" "} likes</p>
 </div>
   )
 };
